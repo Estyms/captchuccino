@@ -1,0 +1,32 @@
+{
+  "captcha-get-data-error": "Cannot get the captchas data",
+  "captcha-delete-data-error": "Cannot delete the captcha data",
+
+  "env-error": "The ENV_VAR environment variable is not set",
+  "translation-error": "The 'TRANSLATION_KEY' translation key doesn't exist for the LOCALE locale",
+
+  "client-build-error": "Cannot create the bot",
+  "bot-error": "The bot errored while starting",
+  "bot-started": "The bot started !",
+
+  "exist-dir-error": "Cannot test if the directory exist",
+  "create-dir-error": "Cannot create directory",
+
+  "save-image-error": "Cannot save the image",
+  "open-image-error": "Cannot open the image",
+  "delete-image-error": "Cannot delete the image",
+
+  "mutex-lock-error": "Cannot get the Mutex Lock",
+
+
+  "server-captcha-validated": "The captcha has been validated !\nWelcome to SERVER_NAME :sparkles:",
+  "server-captcha-incorrect": "The captcha is incorrect, please try again.",
+  "server-captcha-prompt": "Please complete the captcha below in order to join SERVER_NAME !",
+
+  "server-cantgetmember-error": "Cannot get the member",
+  "server-cantgetguild-error": "Cannot get the server",
+  "server-cantaddrole-error": "Cannot add a role",
+  "server-cantremoverole-error": "Cannot remove a role",
+  "server-cantgetchannel-error": "Cannot get the channel",
+  "server-cantsendmessage-error": "Cannot send a message"
+}

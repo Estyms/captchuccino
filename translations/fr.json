@@ -1,0 +1,32 @@
+{
+  "captcha-get-data-error": "Impossible de récuperer les données des captchas",
+  "captcha-delete-data-error": "Impossible de supprimer les données du captcha",
+
+  "env-error": "La variable d'environnement ENV_VAR n'existe pas",
+  "translation-error": "La clé de traduction 'TRANSLATION_KEY' n'existe pas pour la locale LOCALE",
+
+  "client-build-error": "Impossible de créer le bot",
+  "bot-error": "Le bot n'a pas réussi a se lancer",
+  "bot-started": "Le bot a démarré !",
+
+  "exist-dir-error": "Impossible de tester si le dossier existe",
+  "create-dir-error": "Impossible de créer le dossier",
+
+  "save-image-error": "Impossible de sauvegarder l'image",
+  "open-image-error": "Impossible d'ouvrir l'image",
+  "delete-image-error": "Impossible de supprimer l'image",
+
+  "mutex-lock-error": "Impossible de récuperer le Lock du Mutex",
+
+
+  "server-captcha-validated": "Le captcha a été validé !\nNous vous souhaitons la bienvenue sur SERVER_NAME :sparkles:",
+  "server-captcha-incorrect": "Le captcha est invalide, veuillez réessayer.",
+  "server-captcha-prompt": "Veuillez remplir le captcha ci-dessous pour rejoindre SERVER_NAME !",
+
+  "server-cantgetmember-error": "Impossible de récuperer le membre",
+  "server-cantgetguild-error": "Impossible de récuperer le serveur",
+  "server-cantaddrole-error": "Impossible d'ajouter un role",
+  "server-cantremoverole-error": "Impossible de retirer un role",
+  "server-cantgetchannel-error": "Impossible de récuperer le salon",
+  "server-cantsendmessage-error": "Impossible d'envoyer un message"
+}
