@@ -15,6 +15,8 @@ To run this project, you will need to add the following environment variables to
 
 `ROLE_ID` : The ID of the Unverified role on your server.
 
+`BOT_CHANNEL_ID` : The ID of the bot channel for logging messages
+
 ## Deployment
 
 > ⚠️ The bot needs to have the SERVER MEMBERS INTENT enabled in the developper dashboard.
@@ -31,6 +33,7 @@ Launch the docker image with environment variables
     -e DISCORD_TOKEN=<TOKEN> \
     -e LANG=<LANG> \
     -e GUILD_ID=<GUILD_ID> \
-    -e ROLE_ID=<ROLE_ID>
+    -e ROLE_ID=<ROLE_ID> \
+    -e BOT_CHANNEL_ID=<BOT_CHANNEL_ID>
 ```
 

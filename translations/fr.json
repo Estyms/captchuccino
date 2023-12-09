@@ -28,5 +28,6 @@
   "server-cantaddrole-error": "Impossible d'ajouter un role",
   "server-cantremoverole-error": "Impossible de retirer un role",
   "server-cantgetchannel-error": "Impossible de récuperer le salon",
-  "server-cantsendmessage-error": "Impossible d'envoyer un message"
+  "server-cantsendmessage-error": "Impossible d'envoyer un message",
+  "server-userhasclosedDM-error": "L'utilisateur <@USERID> a ses DM fermé et ne pas pas remplir le captcha"
 }

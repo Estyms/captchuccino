@@ -28,5 +28,6 @@
   "server-cantaddrole-error": "Cannot add a role",
   "server-cantremoverole-error": "Cannot remove a role",
   "server-cantgetchannel-error": "Cannot get the channel",
-  "server-cantsendmessage-error": "Cannot send a message"
+  "server-cantsendmessage-error": "Cannot send a message",
+  "server-userhasclosedDM-error": "User <@USERID> has closed DM and cannot complete captcha"
 }

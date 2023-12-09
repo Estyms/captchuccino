@@ -12,11 +12,11 @@ use serenity::client::Context;
 use serenity::model::channel::{Message};
 use serenity::model::gateway::Ready;
 use serenity::model::guild::Member;
-use serenity::model::id::{RoleId, UserId};
+use serenity::model::id::{ChannelId, RoleId, UserId};
 use serenity::model::prelude::Guild;
 use serenity::prelude::{EventHandler, GatewayIntents, TypeMapKey};
 use crate::utils::captcha_builder::build_captcha;
-use crate::utils::i18n::{get_translation, get_env_error_message, get_server_message};
+use crate::utils::i18n::{get_translation, get_env_error_message, get_server_message, get_user_send_error};
 
 struct Handler;
 
@@ -64,8 +64,15 @@ async fn send_captcha(_ctx: &Context, _new_member: Member, msg: &str) {
 
         let files = vec![(&file, file_name)];
 
-        channel.send_files(&_ctx, files, |m| m.content(msg)).await
-            .expect(get_translation("server-cantsendmessage-error").as_str());
+        match channel.send_files(&_ctx, files, |m| m.content(msg)).await {
+            Ok(_) => {
+
+            }
+            Err(_) => {
+                ChannelId::from(get_bot_channel_id())
+                .send_message(&_ctx, |m| m.content(get_user_send_error(_new_member.user.id.0).as_str()))
+                .await.expect(get_translation("server-cantsendmessage-error").as_str());}
+        }
 
         remove_file(file_name_string.as_str())
             .expect(get_translation("delete-image-error").as_str());
@@ -156,6 +163,11 @@ fn get_role_id() -> RoleId {
 fn get_guild_id() -> u64 {
     let guild_id = env::var("GUILD_ID").expect(get_env_error_message("GUILD_ID").as_str());
     guild_id.parse::<u64>().expect("Cannot parse GUILD_ID to int")
+}
+
+fn get_bot_channel_id() -> u64 {
+    let channel_id = env::var("BOT_CHANNEL_ID").expect(get_env_error_message("GUILD_ID").as_str());
+    channel_id.parse::<u64>().expect("Cannot parse BOT_CHANNEL")
 }
 
 #[tokio::main]
